@@ -8,10 +8,10 @@ class Tugas4Flutter extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Laporan & Riwayat Udara',
+          'VibeTech Xyz',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        centerTitle: true, // biar di tengah
+        centerTitle: true,
         backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
       ),
@@ -21,17 +21,27 @@ class Tugas4Flutter extends StatelessWidget {
         children: [
           // --- BAGIAN FORM ---
           const Text(
-            'Laporan Kondisi Udara',
+            'Form Penjualan Baru',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
 
-          // 4 TextField
+          // 4 TextField disesuaikan
           const TextField(
             decoration: InputDecoration(
-              labelText: 'Titik Lokasi (Nama Jalan/Gedung)',
-              prefixIcon: Icon(Icons.transfer_within_a_station),
+              labelText: 'Nama Pelanggan',
+              prefixIcon: Icon(Icons.person),
+              border: OutlineInputBorder(),
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          const TextField(
+            decoration: InputDecoration(
+              labelText: 'Paket VPS / Panel Hosting',
+              hintText: 'Contoh: VPS 2GB, cPanel 5 Domain',
+              prefixIcon: Icon(Icons.cloud),
               border: OutlineInputBorder(),
             ),
           ),
@@ -40,17 +50,8 @@ class Tugas4Flutter extends StatelessWidget {
           const TextField(
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
-              labelText: 'Skor AQI Teramati',
-              prefixIcon: Icon(Icons.air),
-              border: OutlineInputBorder(),
-            ),
-          ),
-          const SizedBox(height: 12),
-
-          const TextField(
-            decoration: InputDecoration(
-              labelText: 'Nama Pelapor',
-              prefixIcon: Icon(Icons.person),
+              labelText: 'Durasi (Bulan)',
+              prefixIcon: Icon(Icons.calendar_month),
               border: OutlineInputBorder(),
             ),
           ),
@@ -59,7 +60,7 @@ class Tugas4Flutter extends StatelessWidget {
           const TextField(
             maxLines: 2,
             decoration: InputDecoration(
-              labelText: 'Catatan Tambahan (Misal: Berkabut)',
+              labelText: 'Catatan Tambahan (Misal: Butuh Setup Awal)',
               prefixIcon: Icon(Icons.notes),
               border: OutlineInputBorder(),
             ),
@@ -71,41 +72,41 @@ class Tugas4Flutter extends StatelessWidget {
 
           // --- BAGIAN DAFTAR / RIWAYAT ---
           const Text(
-            'Riwayat Laporan Terakhir',
+            'Riwayat Penjualan Terakhir',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 12),
 
-          // Minimal 5 ListTile ditulis manual, tanpa list
+          // Minimal 5 ListTile ditulis manual
           _buildListTile(
-            icon: Icons.warning,
-            iconColor: Colors.red,
-            title: 'Jakarta Pusat',
-            subtitle: 'AQI: 156 - Tidak Sehat. Dilaporkan 5 menit lalu.',
+            icon: Icons.computer,
+            iconColor: Colors.teal,
+            title: 'Budi Santoso',
+            subtitle: 'VPS 4GB - 12 Bulan. Dibayar 5 menit lalu.',
           ),
           _buildListTile(
-            icon: Icons.cloud,
-            iconColor: Colors.orange,
-            title: 'Bandung Kota',
-            subtitle: 'AQI: 95 - Sedang. Dilaporkan 30 menit lalu.',
+            icon: Icons.dns,
+            iconColor: Colors.blue,
+            title: 'PT Maju Jaya',
+            subtitle: 'Panel WHMCS - 3 Bulan. Dibayar 30 menit lalu.',
           ),
           _buildListTile(
-            icon: Icons.check_circle,
+            icon: Icons.storage,
             iconColor: Colors.green,
-            title: 'Yogyakarta',
-            subtitle: 'AQI: 42 - Baik. Dilaporkan 1 Hari lalu.',
+            title: 'Siti Aminah',
+            subtitle: 'Hosting SSD 10GB - 1 Tahun. Dibayar 1 Hari lalu.',
           ),
           _buildListTile(
-            icon: Icons.masks,
-            iconColor: Colors.red,
-            title: 'Semarang',
-            subtitle: 'AQI: 120 - Sensitif. Dilaporkan 1 Hari lalu.',
-          ),
-          _buildListTile(
-            icon: Icons.cloud,
+            icon: Icons.security,
             iconColor: Colors.orange,
-            title: 'Surabaya',
-            subtitle: 'AQI: 78 - Sedang. Dilaporkan 2 Hari lalu.',
+            title: 'Riko Firmansyah',
+            subtitle: 'VPS 8GB + DDOS - 6 Bulan. Dibayar 1 Hari lalu.',
+          ),
+          _buildListTile(
+            icon: Icons.receipt_long,
+            iconColor: Colors.purple,
+            title: 'CV Digital Kreatif',
+            subtitle: 'Panel Pterodactyl - 1 Bulan. Dibayar 2 Hari lalu.',
           ),
 
           const SizedBox(height: 40),
@@ -124,9 +125,9 @@ class Tugas4Flutter extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: ListTile(
-        leading: Icon(icon, color: iconColor), // Leading
-        title: Text(title), // Title
-        subtitle: Text(subtitle), // Subtitle
+        leading: Icon(icon, color: iconColor),
+        title: Text(title),
+        subtitle: Text(subtitle),
         trailing: const Icon(Icons.chevron_right),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         tileColor: Colors.grey[100],
