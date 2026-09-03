@@ -1,4 +1,3 @@
-// Day 32: Dio HTTP Client Factory
 import 'package:dio/dio.dart';
 
 Dio createDioClient() {
@@ -14,7 +13,6 @@ Dio createDioClient() {
     ),
   );
 
-  // LogInterceptor mencetak detail request dan response di console/debugger
   dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
 
   return dio;
