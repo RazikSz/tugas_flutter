@@ -1,4 +1,3 @@
-// Day 32: Model Data Resep DummyJSON menggunakan JsonSerializable
 import 'package:json_annotation/json_annotation.dart';
 
 part 'post_models.g.dart';
@@ -105,7 +104,6 @@ class RecipeModel {
   Map<String, dynamic> toJson() => _$RecipeModelToJson(this);
 }
 
-// Alias agar kompatibel jika ada pemanggilan lama
 typedef PostModels = RecipeModel;
 typedef CocktailResponse = RecipeResponse;
 typedef DrinkModel = RecipeModel;
