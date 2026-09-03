@@ -50,7 +50,6 @@ class _PostListScreenState extends State<PostListScreen> {
       ),
       body: Column(
         children: [
-          // 6. Bonus: Search Bar untuk filter item
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             child: TextField(
@@ -65,7 +64,7 @@ class _PostListScreenState extends State<PostListScreen> {
               onChanged: (val) => setState(() => _searchQuery = val),
             ),
           ),
-          // List Data dengan RefreshIndicator (Bonus) & FutureBuilder
+
           Expanded(
             child: RefreshIndicator(
               onRefresh: _onRefresh,
@@ -104,7 +103,7 @@ class _PostListScreenState extends State<PostListScreen> {
                     );
                   }
 
-                  // C. UI Layout menggunakan Card, Padding, Row & Column
+
                   return ListView.builder(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     itemCount: filteredRecipes.length,
