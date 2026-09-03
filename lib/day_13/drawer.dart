@@ -4,6 +4,8 @@ import 'package:tugas3flutter/day_11/extensions/navigator.dart';
 import 'package:tugas3flutter/day_8/stack.dart';
 import 'package:tugas3flutter/tugas5flutter.dart';
 
+import 'package:tugas3flutter/day_33/views/splash_view.dart';
+
 class DrawerDay13 extends StatefulWidget {
   const DrawerDay13({super.key});
 
@@ -25,33 +27,33 @@ class _DrawerDay13State extends State<DrawerDay13> {
   final List<Widget> _widgetOptions = [
     StackDay8(),
     Tugas5Flutter(),
-    // LoginScreen(),
+    const SplashView(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Drawer")),
+      appBar: AppBar(title: const Text("Drawer Menu")),
       drawer: Drawer(
         child: ListView(
           children: [
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
+              leading: const Icon(Icons.home),
+              title: const Text("Home"),
               onTap: () {
                 changeBottom(0);
               },
             ),
             ListTile(
-              leading: Icon(Icons.school),
-              title: Text("School"),
+              leading: const Icon(Icons.school),
+              title: const Text("School"),
               onTap: () {
                 changeBottom(1);
               },
             ),
             ListTile(
-              leading: Icon(Icons.business),
-              title: Text("Business"),
+              leading: const Icon(Icons.account_circle, color: Color(0xFF4A00E0)),
+              title: const Text("Tugas 16: Auth & CRUD (Day 33)"),
               onTap: () {
                 changeBottom(2);
               },

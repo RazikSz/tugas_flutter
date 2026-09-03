@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:tugas3flutter/day_33/views/splash_view.dart';
-// import 'package:tugas3flutter/day_13/drawer.dart';
+import 'views/splash_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(const Day33App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Day33App extends StatelessWidget {
+  const Day33App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Tugas 16 Flutter - Autentikasi & CRUD Profile',
       debugShowCheckedModeBanner: false,
-      title: 'Tugas 16 Flutter: Autentikasi & CRUD Profile',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF4A00E0),
@@ -23,10 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // Tugas 16: Autentikasi & CRUD Profile via API (Day 33)
       home: const SplashView(),
-      // Atau gunakan DrawerDay13 jika ingin membuka menu drawer:
-      // home: const DrawerDay13(),
     );
   }
 }

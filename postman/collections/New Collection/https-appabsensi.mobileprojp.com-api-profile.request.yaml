@@ -1,0 +1,13 @@
+$kind: http-request
+name: https://appabsensi.mobileprojp.com/api/profile
+description: ""
+url: https://appabsensi.mobileprojp.com/api/profile
+method: PUT
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: 9283|OZrieYGx0wM393NizsA72PDFlDacjFKOCNMFdfuof74e6abc
+order: 1788410323231
