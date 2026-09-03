@@ -1,4 +1,3 @@
-// Day 32: Retrofit API Service Interface
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -23,7 +22,7 @@ abstract class ApiService {
   Future<RecipeResponse> searchRecipes(@Query('q') String query);
 }
 
-// Extension / fungsi fetchData() sesuai spesifikasi tugas
+
 extension ApiServiceHelper on ApiService {
   Future<List<RecipeModel>> fetchData() async {
     final response = await getRecipes();
